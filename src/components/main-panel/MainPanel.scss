@@ -1,0 +1,15 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-panel {
+  @include flex-center();
+}
+
+.main-panel {
+  height: 100%;
+  width: 100%;
+}

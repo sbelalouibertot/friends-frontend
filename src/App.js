@@ -1,50 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
-import { Provider } from "react-redux";
-import { createStore, applyMiddleware, compose } from "redux";
-import rootReducer from "./redux/reducers/rootReducer";
-import thunk from 'redux-thunk'
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import LeftPanel from "./components/left-panel/LeftPanel";
+import UserSelection from "./components/user-selection/UserSelection";
+import MainPanel from "./components/main-panel/MainPanel";
 
-const middleware = [thunk]
-const enhancers = [];
-if (
-  process.env.NODE_ENV === "development" &&
-  typeof window != undefined &&
-  window.devToolsExtension
-) {
-  enhancers.push(
-    window.__REDUX_DEVTOOLS_EXTENSION__
-      ? window.__REDUX_DEVTOOLS_EXTENSION__ &&
-      window.__REDUX_DEVTOOLS_EXTENSION__()
-      : (f) => f
-  );
-}
-const store = createStore(
-  rootReducer,
-  compose(applyMiddleware(...middleware), ...enhancers)
-);
+const App = () => {
+  const [user, setUser] = useState(null);
+  const [userList, setUserList] = useState([
+    {
+      name: "Jean",
+      subscriptionDate: 0,
+      friendsNb: 312,
+      incomingMessagesNb: 0,
+    },
+    {
+      name: "Pierre",
+      subscriptionDate: 0,
+      friendsNb: 402,
+      incomingMessagesNb: 3,
+    },
+    {
+      name: "Eric",
+      subscriptionDate: 0,
+      friendsNb: 121,
+      incomingMessagesNb: 4,
+    },
+  ]);
 
-function App() {
+  const onUserSelectedChange = (user) => setUser(user);
+  const onLogout = () => setUser(null);
+
   return (
-    <Provider store={store}>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-        </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-        </a>
-        </header>
-      </div>
-    </Provider>
+    <div className="App">
+      <div className="header">Friends</div>
+      {user ? (
+        <div className="panel-container">
+          <LeftPanel user={user} onLogout={onLogout} />
+          <MainPanel user={user}></MainPanel>
+        </div>
+      ) : (
+        <UserSelection
+          userList={userList}
+          onUserSelectedChange={onUserSelectedChange}
+        />
+      )}
+    </div>
   );
-}
+};
 
 export default App;
