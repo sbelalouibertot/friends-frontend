@@ -7,16 +7,18 @@
   width: 100%;
 }
 
-.header {
-  height: 75px;
+.header {    
+  height: 63px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #b7dbe2;
-  font-family: cursive;
-  font-size: 43px;
-  color: #272727;
+  background-color: #3a3a3a;
+  font-family: revert;
+  font-size: 37px;
+  font-variant: small-caps;
+  color: #9e9e9e;
+  letter-spacing: 26px;
 }
 
 .panel-container {

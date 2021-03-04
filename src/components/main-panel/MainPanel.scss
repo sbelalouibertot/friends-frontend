@@ -10,5 +10,19 @@
   @include flex-center();
   height: 100%;
   width: 100%;
+  background-color: #d8d8d8;
 }
 
+.activity,
+.friends,
+.messages {
+  .title {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    color: rgb(66, 66, 66);
+    margin-bottom: 10px;
+  }
+}

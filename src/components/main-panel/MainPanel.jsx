@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./MainPanel.scss";
 import Friends from './friends/Friends'
 import Messages from './messages/Messages'
-import Posts from './posts/Posts'
+import Activity from './activity/Activity'
 
 const MainPanel = (props) => {
   const { user, onLogout } = props;
@@ -10,7 +10,7 @@ const MainPanel = (props) => {
 
   return (
     <div className="main-panel">
-        <Posts />
+        <Activity />
         <Friends />
         <Messages />
     </div>
