@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Friends.scss";
+import {GiHearts} from "react-icons/gi";
 
 const Friends = (props) => {
   const [friendsActions, setFriendsActions] = useState([
@@ -21,6 +22,12 @@ const Friends = (props) => {
       description: "a regardé un film",
       date: "il y a une semaine",
     },
+    {
+      key: "Paul",
+      avatar: "images/avatar.jpg",
+      description: "a fait du sport",
+      date: "il y a une semaine",
+    },
   ]);
   return (
     <div className="friends">
@@ -36,6 +43,7 @@ const Friends = (props) => {
               </div>
               <div className="friends-action-date">{action.date}</div>
             </div>
+            <GiHearts />
           </div>
         ))}
       </div>
