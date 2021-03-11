@@ -10,7 +10,7 @@
   @include flex-center();
   height: 100%;
   width: 100%;
-  background-color: #d8d8d8;
+  background-color: white;
 }
 
 .activity,
@@ -23,6 +23,7 @@
 .activity,
 .friends,
 .messages {
+  border: 1px solid #b7b7b7;
   .title {
     font-size: 18px;
   }

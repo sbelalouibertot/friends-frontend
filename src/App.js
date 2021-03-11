@@ -32,7 +32,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="header">Friends</div>
+      <div className="header">
+        <div className="header-main-title">Friends</div>
+        <div className="header-secondary-title">Communiquez plus facilement</div>
+      </div>
       {user ? (
         <div className="panel-container">
           <LeftPanel user={user} onLogout={onLogout} />

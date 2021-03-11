@@ -7,18 +7,32 @@
   width: 100%;
 }
 
-.header {    
-  height: 63px;
+.header {
+  height: 50px;
+  padding-left: 25px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  background-color: #b5b5b5;
-  font-family: revert;
-  font-size: 37px;
-  font-variant: small-caps;
-  color: #5a5a5a;
-  letter-spacing: 26px;
+  font-size: 30px;
+  color: #cbcacb;
+  background: radial-gradient(
+    circle,
+    rgb(0, 23, 47) 0%,
+    rgb(0, 31, 68) 33%,
+    rgb(7, 15, 23) 67%,
+    rgb(0, 40, 103) 100%
+  );
+  border-bottom: 1px solid #828282;
+}
+
+.header-main-title {
+}
+
+.header-secondary-title {
+  font-size: 16px;
+  color: #bfbfbf;
+  margin-left: 15px;
 }
 
 .panel-container {
