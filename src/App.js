@@ -3,6 +3,7 @@ import "./App.css";
 import LeftPanel from "./components/left-panel/LeftPanel";
 import UserSelection from "./components/user-selection/UserSelection";
 import MainPanel from "./components/main-panel/MainPanel";
+import {AiFillMail, AiFillLike} from 'react-icons/ai'
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -33,8 +34,20 @@ const App = () => {
   return (
     <div className="App">
       <div className="header">
-        <div className="header-main-title">Friends</div>
-        <div className="header-secondary-title">Communiquez plus facilement</div>
+        <div className="header-title">
+          <div className="header-main-title">Friends</div>
+          <div className="divider"></div>
+          <div className="header-secondary-title">
+            Communiquez plus facilement
+          </div>
+        </div>
+        <div className="header-icons">
+          <AiFillLike />
+          <AiFillMail />
+          <div className="user-icon">
+            S
+          </div>
+        </div>
       </div>
       {user ? (
         <div className="panel-container">
