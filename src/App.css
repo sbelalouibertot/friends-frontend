@@ -43,6 +43,7 @@
 
 .header-icons > * {
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .divider {

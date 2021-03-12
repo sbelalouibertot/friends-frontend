@@ -44,14 +44,14 @@ const App = () => {
         <div className="header-icons">
           <AiFillLike />
           <AiFillMail />
-          <div className="user-icon">
+          <div className="user-icon" onClick={onLogout}>
             S
           </div>
         </div>
       </div>
       {user ? (
         <div className="panel-container">
-          <LeftPanel user={user} onLogout={onLogout} />
+          <LeftPanel user={user} />
           <MainPanel user={user}></MainPanel>
         </div>
       ) : (

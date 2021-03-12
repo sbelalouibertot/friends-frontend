@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Friends.scss";
-import {GiHearts} from "react-icons/gi";
+import {FcLikePlaceholder} from "react-icons/fc";
 
 const Friends = (props) => {
   const [friendsActions, setFriendsActions] = useState([
@@ -43,7 +43,7 @@ const Friends = (props) => {
               </div>
               <div className="friends-action-date">{action.date}</div>
             </div>
-            <GiHearts />
+            <FcLikePlaceholder />
           </div>
         ))}
       </div>

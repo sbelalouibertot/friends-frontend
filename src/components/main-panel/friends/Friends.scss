@@ -1,11 +1,11 @@
 .friends {
   height: 40%;
-  width: 40%;
+  flex: 1;
 
   padding: 10px;
   background-color: whitesmoke;
   border-radius: 5px;
-  margin: 10px;
+  margin: 5px;
 
   display: flex;
   flex-direction: column;
