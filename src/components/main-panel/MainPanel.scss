@@ -8,17 +8,19 @@
 
 .main-panel {
   @include flex-center();
+  flex: 1;
+  flex-wrap: wrap;
   height: 100%;
-  width: 100%;
   background-color: white;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.activity,
-.friends {
+.activity {
   max-width: 350px;
 }
 .messages {
-    max-width: 740px;
+    width: 96%;
 }
 .activity,
 .friends,

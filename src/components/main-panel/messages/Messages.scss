@@ -11,8 +11,10 @@
   .messages-container {
     flex: 1;
     display: flex;
+    height: 255px;
 
     .messages-categories {
+      height: 100%;
       width: 100px;
       display: flex;
       flex-direction: column;
@@ -24,13 +26,15 @@
       .category {
         margin-top: 10px;
         margin-left: 12px;
+        cursor: pointer;
       }
     }
     .messages-content {
-      height: 200px;
+      height: 100%;
       padding: 10px;
       padding-left: 20px;
       overflow: scroll;
+      flex: 1;
 
       .message {
         margin-bottom: 15px;

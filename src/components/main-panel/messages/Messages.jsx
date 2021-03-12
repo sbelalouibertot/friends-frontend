@@ -31,6 +31,13 @@ const Messages = (props) => {
       content:
         "Bonjour, j'espère que tu vas bien. Pouvons-nous convenir d'un rendez-vous la semaine prochaine ? Merci",
     },
+    {
+      author: "Philippe",
+      date: "02/04/2020",
+      object: "Demande de réunion",
+      content:
+        "Bonjour, j'espère que tu vas bien. Pouvons-nous convenir d'un rendez-vous la semaine prochaine ? Merci",
+    },
   ]);
   return (
     <div className="messages">
